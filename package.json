@@ -1,0 +1,33 @@
+{
+  "name": "bartreminder",
+  "version": "1.0.0",
+  "description": "reminder for real-time bart departures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregoryinouye/hrsf116-mvp.git"
+  },
+  "author": "gregory i",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregoryinouye/hrsf116-mvp/issues"
+  },
+  "homepage": "https://github.com/gregoryinouye/hrsf116-mvp#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "prop-types": "^15.7.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4"
+  }
+}
