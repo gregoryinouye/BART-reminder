@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS `users`;
+		
+-- CREATE TABLE `users` (
+--   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+--   `username` TEXT NULL DEFAULT NULL,
+--   `phone` INTEGER NULL DEFAULT NULL,
+--   PRIMARY KEY (`id`)
+-- );
