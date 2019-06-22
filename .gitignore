@@ -11,5 +11,6 @@ node_modules/
 # Mac
 .DS_Store
 
-# passwords
+# passwords and APIs
 databasePassword.js
+API_keys.js
