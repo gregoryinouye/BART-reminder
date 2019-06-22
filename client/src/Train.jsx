@@ -1,10 +1,14 @@
 import React from 'react';
 
 const Train = props => {
-  const { min } = props;
+  const { min, handleChange, route } = props;
+  const identifier = route.concat(min);
 
   return (
-    <div>{min}</div>
+    <div>
+      <input type="radio" name="trainToCatch" id={identifier} value={JSON.stringify({[route]: min})} onChange={handleChange} />
+      <label htmlFor={identifier}>{min}</label>
+    </div>
   );
 }
 

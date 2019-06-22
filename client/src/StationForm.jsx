@@ -8,11 +8,7 @@ const StationForm = props => {
       <label htmlFor="station">Select Station: </label>
       <select name="station" onChange={handleChange} required>
         <option value="" hidden>Choose station</option>
-        {stationList.map((element, index) => {
-          return (
-            <option value={element.abbr} key={index}>{element.name}</option>
-          );
-        })}
+        {stationList.map((element, index) => <option value={element.abbr} key={index}>{element.name}</option>)}
       </select>
       <input type="submit"></input>
     </form>
