@@ -13,7 +13,7 @@ const StationSchedule = props => {
     </div>
     <br></br>
     <div>
-      <button type="submit">Get Reminder</button>
+      <button type="submit">Set Reminder</button>
     </div>
   </form>
   );

@@ -6,7 +6,7 @@ import StationForm from './StationForm.jsx';
 import StationSchedule from './StationSchedule.jsx';
 import UserLogin from './UserLogin.jsx';
 
-import BART_API_KEY from '../../server/API_keys.js';
+import { BART_API_KEY } from '../../server/API_keys.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,7 +48,7 @@ class App extends React.Component {
       const { time, station } = res.data.root;
       const stationName = station[0].name;
       station[0].etd.forEach(route => etd[route.destination] = route.estimate.map(train => train.minutes));
-      this.setState({ etd, time, stationName })
+      this.setState({ etd, time, stationName });
     }).catch(error => console.log(error));
   };
 
@@ -70,7 +70,7 @@ class App extends React.Component {
   handleUsernameSubmit(e) {
     e.preventDefault();
     e.stopPropagation();
-    this.setState({ isLoggedIn: true })
+    this.setState({ isLoggedIn: true });
     // get user data from database;
   }
 

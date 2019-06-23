@@ -1,7 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const twilio = require('twilio');
 
 const mysql = require('../database/database');
+const { twilioAccountSid, twilioAuthToken, twilioPhoneNumber } = require('./API_keys.js');
+
+const client = twilio(twilioAccountSid, twilioAuthToken);
 const server = express();
 const port = process.env.PORT || 3000;
 
@@ -9,6 +13,17 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: false }));
 
 server.use(express.static('./client/dist'));
+
+const sendSMS = (phoneNumber, message) => {
+  client.messages
+    .create({
+      body: message,
+      from: twilioPhoneNumber,
+      to: phoneNumber,
+    })
+    .then(message => console.log(message.sid))
+    .catch(error => console.log(error));
+}
 
 // USERS
 
