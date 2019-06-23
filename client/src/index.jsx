@@ -87,7 +87,7 @@ class App extends React.Component {
           <div>
             <div>
               <div><button type="button" value="Logout" onClick={this.handleLogOut}>Log out as {this.state.username}</button></div>
-              <div>Reminders to be sent to {this.state.phoneNumber.length > 0 ? this.state.phoneNumber : 'OUTER SPACE'}.</div>
+              <div>Reminders will be sent to {this.state.phoneNumber.length > 0 ? 'your phone number on file' : 'OUTER SPACE'}.</div>
               <div>Reminder will include {this.state.minToStation} min to reach the station.</div>
             </div>
             <br></br>
