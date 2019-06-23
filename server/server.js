@@ -28,12 +28,21 @@ const sendSMS = (phoneNumber, message) => {
 // USERS
 
 // GET user
-// server.get('/users/:userID', (req, res) => {
-// }
+server.get('/users/:username', (req, res) => {
+  const { username } = req.params;
+  mysql.query('SELECT * FROM `users` WHERE `username` = ?', [ username ], (error, results, fields) => {
+    if (error) {
+      console.error(error);
+    } else {
+      res.status(200).send(results);
+      console.log(results)
+    }
+  });
+});
 
 // POST user
 // server.post('/users/:userID', (req, res) => {
-// }
+// })
 
 // PATCH user
 // server.patch('/users/:userID', (req, res) => {

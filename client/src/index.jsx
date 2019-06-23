@@ -68,10 +68,15 @@ class App extends React.Component {
   }
   
   handleUsernameSubmit(e) {
+    const { username } = this.state;
     e.preventDefault();
     e.stopPropagation();
-    this.setState({ isLoggedIn: true });
-    // get user data from database;
+    axios.get(`/users/${username}`)
+    .then(query => {
+      const { id, phoneNumber, minToStation } = query.data[0];
+      this.setState({ isLoggedIn: true, id, phoneNumber, minToStation });
+    })
+    .catch(error => console.log(error));
   }
 
   render() {
@@ -83,7 +88,7 @@ class App extends React.Component {
             <div>
               <div><button type="button" value="Logout" onClick={this.handleLogOut}>Log out as {this.state.username}</button></div>
               <div>Reminders to be sent to {this.state.phoneNumber.length > 0 ? this.state.phoneNumber : 'OUTER SPACE'}.</div>
-              <div>It will take you {this.state.minToStation} min to reach the station.</div>
+              <div>Reminder will include {this.state.minToStation} min to reach the station.</div>
             </div>
             <br></br>
             <StationForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} stationList={this.state.stationList}/>
