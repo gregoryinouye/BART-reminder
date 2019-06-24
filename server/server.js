@@ -35,7 +35,6 @@ server.get('/users/:username', (req, res) => {
       console.error(error);
     } else {
       res.status(200).send(results);
-      console.log(results)
     }
   });
 });

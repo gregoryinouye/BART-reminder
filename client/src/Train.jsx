@@ -6,7 +6,7 @@ const Train = props => {
 
   return (
     <div>
-      <input type="radio" name="trainToCatch" id={identifier} value={JSON.stringify({[route]: min})} onChange={handleChange} />
+      <input type="radio" name="trainEtd" id={identifier} value={min} onChange={handleChange} />
       <label htmlFor={identifier}>{min}</label>
     </div>
   );

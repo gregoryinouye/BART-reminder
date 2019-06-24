@@ -3,10 +3,10 @@ import React from 'react';
 import StationLine from './StationLine.jsx';
 
 const StationSchedule = props => {
-  const { etd, handleChange, stationName, time } = props;
+  const { etd, handleChange, setReminder, stationName, time } = props;
 
   return (
-  <form onSubmit={(e) => { e.preventDefault(); e.stopPropagation(); console.log(e.target)}}>
+  <form onSubmit={setReminder}>
     <div>{stationName} Station Schedule retrieved at {time}</div>
     <div>
       {Object.keys(etd).map((property, index) => <StationLine routeName={property} min={etd[property]} key={index} handleChange={handleChange} />)}
