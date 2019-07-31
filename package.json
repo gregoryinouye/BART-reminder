@@ -5,11 +5,11 @@
   "main": "./client/src/index.jsx",
   "scripts": {
     "start": "nodemon server/server.js",
-    "test": "jest",
+    "test": "jest --verbose --watch",
     "webpack": "webpack -d --watch"
   },
   "jest": {
-    "setupFilesAfterEnv": ["./client/src/setupTests.js"]
+    "setupFilesAfterEnv": ["./spec/setupTests.js"]
   },
   "repository": {
     "type": "git",
