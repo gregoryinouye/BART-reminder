@@ -1,4 +1,4 @@
 module.exports = {
-  dbUser: process.env.DBUSER || 'ENTER_USERNAME_HERE',
-  dbPassword: process.env.DBPASSWORD || 'ENTER_PASSWORD_HERE',
+  dbUser: process.env.DB_USER || 'ENTER_USERNAME_HERE',
+  dbPassword: process.env.DB_PASSWORD || 'ENTER_PASSWORD_HERE',
 };
