@@ -4,6 +4,7 @@ import App from '../client/src/App';
 
 describe('App Component Tests', () => {
   it('<App /> renders', () => {
-    shallow(<App />);
+    const wrapper = shallow(<App />);
+    expect(wrapper.exists()).toBe(true);
   });
 });
