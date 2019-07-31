@@ -2,11 +2,14 @@
   "name": "bartreminder",
   "version": "1.0.0",
   "description": "reminder for real-time bart departures",
-  "main": "index.js",
+  "main": "./client/src/index.jsx",
   "scripts": {
     "start": "nodemon server/server.js",
     "test": "jest",
     "webpack": "webpack -d --watch"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["./client/src/setupTests.js"]
   },
   "repository": {
     "type": "git",
@@ -34,8 +37,11 @@
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.8.0",
     "prop-types": "^15.7.2",
+    "react-test-renderer": "^16.8.6",
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6"
   }
