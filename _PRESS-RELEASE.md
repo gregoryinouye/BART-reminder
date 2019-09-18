@@ -39,7 +39,7 @@ Once the project moves into development, the press release can be used as a touc
   > "Come try this. You probably won't regret it." - Somebody
 
 ## How to Get Started ##
-  > Just sign up.
+  > Just sign up. Phone number required.
   <!-- >> Describe how easy it is to get started. -->
 
 ## Customer Quote ##
